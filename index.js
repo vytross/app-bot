@@ -34,7 +34,7 @@ client.once('ready', () => {
 });
 
 client.on('messageCreate', async message => {
-    if (message.author.id != 896577979319189524 && message.channelId == 896271184902103070) {
+    if (message.author.id != 896577979319189524 && message.channelId == 896271184902103070) { // this channel ID is currently set to a private PT channel, change to whatever
         const channel = message.channel;
         const receivedEmbed = message.embeds[0];
         message.delete()
@@ -75,7 +75,7 @@ client.on('messageCreate', async message => {
             startMessage: mainMessage,
             name: username,
             autoArchiveDuration: 10080,
-            reason: 'New ProtoTech Application',
+            reason: 'New ProtoTech Application', // obv change this if you're using it
         });
         const threadId = thread.id;
         const appMessage = await thread.send({embeds: [sentEmbed]});
